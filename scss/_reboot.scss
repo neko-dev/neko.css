@@ -1,6 +1,10 @@
+body {
+    font-family: $font;
+    -webkit-font-smoothing: antialiased;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }

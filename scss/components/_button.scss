@@ -1,0 +1,26 @@
+.#{$name-prefix}button {
+    display: inline-block;
+    height: $Button-base-height;
+    line-height: $Button-base-height;
+    min-width: $Button-base-min-width;
+    margin: 0px;
+    padding: 0px;
+    border: 10px;
+    font-family: $font;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    position: relative;
+    color: $primary-text-color;
+    transition: $transition-base;
+    border-radius: $Button-radius;
+    user-select: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @include box_shadow(1);
+    &:hover {
+      background-color: rgba(153, 153, 153, 0.2);
+    }
+}

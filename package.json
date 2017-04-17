@@ -1,0 +1,38 @@
+{
+  "name": "neko.css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neko-dev/neko.css.git"
+  },
+  "author": "neko-dev",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/neko-dev/neko.css/issues"
+  },
+  "homepage": "https://github.com/neko-dev/neko.css#readme",
+  "devDependencies": {
+    "@types/autoprefixer": "^6.7.1",
+    "@types/gulp": "^4.0.2",
+    "@types/gulp-sass": "^0.0.30",
+    "autoprefixer": "^6.7.7",
+    "cssnano": "^3.10.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0",
+    "ts-node": "^3.0.2",
+    "typescript": "^2.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

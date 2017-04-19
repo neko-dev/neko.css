@@ -1,0 +1,14 @@
+.#{$name-prefix}center {
+    @include makeCenter();
+}
+
+.#{$name-prefix}container {
+    @include makeCenter();
+    max-width: $container-width;
+    padding: 0px 8px;
+}
+
+.#{$name-prefix}row {
+    @include makeCenter();
+    margin: 0px -8px;
+}

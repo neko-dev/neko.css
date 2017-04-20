@@ -1,14 +1,61 @@
 .#{$name-prefix}center {
-    @include makeCenter();
+    display:  block;
+    margin: 0px auto;
 }
 
 .#{$name-prefix}container {
-    @include makeCenter();
+    @extend .#{$name-prefix}center;
+    @include gutter();
+    margin-right: auto;
+    margin-left: auto;
     max-width: $container-width;
-    padding: 0px 8px;
 }
 
 .#{$name-prefix}row {
-    @include makeCenter();
-    margin: 0px -8px;
+    @extend .#{$name-prefix}center;
+    @include remove-gutter();
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.#{$name-prefix}no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+}
+
+%#{$name-prefix}grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+
+    @include gutter();
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @for $i from 1 through $grid-columns {
+      .#{$name-prefix}col#{$infix}-#{$i} {
+        @extend %#{$name-prefix}grid-column;
+      }
+    }
+
+    @include media-breakpoint-up($breakpoint) {
+
+      @for $i from 1 through $grid-columns {
+        .#{$name-prefix}col#{$infix}-#{$i} {
+          width: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }

@@ -4,10 +4,24 @@ import * as rename from 'gulp-rename'
 import * as autoprefixer from "autoprefixer"
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
+const postcssflexbugsfixes = require('postcss-flexbugs-fixes');
 
 gulp.task('sass', () => {
   var plugins = [
-        autoprefixer()
+        autoprefixer({
+          browsers: [
+            'Chrome >= 35',
+            'Firefox >= 38',
+            'Edge >= 12',
+            'Explorer >= 10',
+            'iOS >= 8',
+            'Safari >= 8',
+            'Android 2.3',
+            'Android >= 4',
+            'Opera >= 12'
+          ]
+        }),
+        postcssflexbugsfixes()
     ];
   return gulp.src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))

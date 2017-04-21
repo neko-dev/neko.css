@@ -37,10 +37,6 @@
     @include gutter();
 }
 
-@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
-  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
-}
-
 @each $breakpoint in map-keys($grid-breakpoints) {
     $infix: breakpoint-infix($breakpoint);
 
@@ -55,6 +51,13 @@
       @for $i from 1 through $grid-columns {
         .#{$name-prefix}col#{$infix}-#{$i} {
           width: percentage($i / $grid-columns);
+        }
+      }
+
+      // `$grid-columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 1 through ($grid-columns - 1) {
+        .#{$name-prefix}offset#{$infix}-#{$i} {
+          margin-left: percentage($i / $grid-columns);
         }
       }
     }

@@ -78,3 +78,7 @@
     }
   }
 }
+
+@function getAbbr($str, $abbr-list: $abbr) {
+  @return if(map-get($abbr-list, $str) == null, "", "#{map-get($abbr-list, $str)}");
+}

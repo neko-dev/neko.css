@@ -20,6 +20,16 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
+// 缩写
+$abbr: (
+  m: margin,
+  p: padding,
+  l: left,
+  r: right,
+  t: top,
+  b: bottom
+);
+
 // Button
 $Button-radius: $radius-base;
 
@@ -30,7 +40,7 @@ $Button-base-padding-horizontal: 10px;
 // container
 $container-width: 900px;
 
-// gril
+// grid
 
 $grid-columns:               12;
 $grid-gutter-width-base:     16px;
@@ -40,4 +50,9 @@ $grid-gutter-widths: (
   md: $grid-gutter-width-base,
   lg: $grid-gutter-width-base,
   xl: $grid-gutter-width-base
-)
+);
+
+// margin and padding helper
+
+$margin-helper-level: 5;
+$margin-helper-level-length: 16px;

@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="./dist/css/neko.css">
   <style>
-    .gril-example-row>div {
+    .grid-example-row>div {
       background-color: rgba(244, 67, 54, 0.51);
       border: 2px solid rgb(244, 67, 54);
       line-height: 50px;
@@ -22,7 +22,7 @@
     <h2>neko-button</h2>
     <button class="neko-button">Button</button>
     <h2>neko-col-x</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-1">1</div>
       <div class="neko-col-1">1</div>
       <div class="neko-col-1">1</div>
@@ -37,54 +37,54 @@
       <div class="neko-col-3">3</div>
     </div>
     <h2>neko-col-sm-x</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-sm-6">6</div>
       <div class="neko-col-sm-3">3</div>
       <div class="neko-col-sm-3">3</div>
     </div>
     <h2>neko-col-md-x</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-md-6">6</div>
       <div class="neko-col-md-3">3</div>
       <div class="neko-col-md-3">3</div>
     </div>
     <h2>neko-col-lg-x</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-lg-6">6</div>
       <div class="neko-col-lg-3">3</div>
       <div class="neko-col-lg-3">3</div>
     </div>
     <h2>neko-col-xl-x</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-xl-6">6</div>
       <div class="neko-col-xl-3">3</div>
       <div class="neko-col-xl-3">3</div>
     </div>
     <h2>neko-offset-6</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-offset-6 neko-col-1">1</div>
     </div>
     <h2>neko-offset-sm-6</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-offset-sm-6 neko-col-1">1</div>
     </div>
     <h2>neko-offset-md-6</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-offset-md-6 neko-col-1">1</div>
     </div>
     <h2>neko-offset-lg-6</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-offset-lg-6 neko-col-1">1</div>
     </div>
     <h2>neko-offset-xl-6</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-offset-xl-6 neko-col-1">1</div>
     </div>
     <h2>Nesting columns</h2>
-    <div class="neko-row gril-example-row">
+    <div class="neko-row grid-example-row">
       <div class="neko-col-sm-9">
         Level 1: .neko-col-sm-9
-        <div class="neko-row gril-example-row">
+        <div class="neko-row grid-example-row">
           <div class="neko-col-8 neko-col-sm-6">
             Level 2: .neko-col-8 .neko-col-sm-6
           </div>
@@ -97,6 +97,9 @@
     </div>
     <h2>neko-helper-center</h2>
     <button class="neko-helper-center neko-button">.neko-button .neko-helper-center</button>
+    <h2>neko-[m/p]-{$direction}-{$level}</h2>
+    <button class="neko-m-l-4 neko-button neko-m-b-1">.neko-button .neko-m-l-4 .neko-m-b-1</button><br>
+    <button class="neko-p-h-2 neko-button neko-m-b-1">.neko-button .neko-p-h-2 .neko-m-b-1</button>
   </div>
 </body>
 

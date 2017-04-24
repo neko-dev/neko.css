@@ -1,0 +1,64 @@
+.#{$name-prefix}center {
+    display:  block;
+    margin: 0px auto;
+}
+
+.#{$name-prefix}container {
+    @extend .#{$name-prefix}center;
+    @include gutter();
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $container-width;
+}
+
+.#{$name-prefix}row {
+    @extend .#{$name-prefix}center;
+    @include remove-gutter();
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.#{$name-prefix}no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+}
+
+%#{$name-prefix}grid-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+
+    @include gutter();
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @for $i from 1 through $grid-columns {
+      .#{$name-prefix}col#{$infix}-#{$i} {
+        @extend %#{$name-prefix}grid-column;
+      }
+    }
+
+    @include media-breakpoint-up($breakpoint) {
+
+      @for $i from 1 through $grid-columns {
+        .#{$name-prefix}col#{$infix}-#{$i} {
+          width: percentage($i / $grid-columns);
+        }
+      }
+
+      // `$grid-columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 1 through ($grid-columns - 1) {
+        .#{$name-prefix}offset#{$infix}-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }

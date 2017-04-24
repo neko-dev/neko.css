@@ -1,13 +1,102 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="./dist/css/neko.css">
-  </head>
-  <body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="./dist/css/neko.css">
+  <style>
+    .gril-example-row>div {
+      background-color: rgba(244, 67, 54, 0.51);
+      border: 2px solid rgb(244, 67, 54);
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="neko-container">
+    <h2>neko-button</h2>
     <button class="neko-button">Button</button>
-  </body>
+    <h2>neko-col-x</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-1">1</div>
+      <div class="neko-col-2">2</div>
+      <div class="neko-col-2">2</div>
+      <div class="neko-col-2">2</div>
+      <div class="neko-col-6">6</div>
+      <div class="neko-col-3">3</div>
+      <div class="neko-col-3">3</div>
+    </div>
+    <h2>neko-col-sm-x</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-sm-6">6</div>
+      <div class="neko-col-sm-3">3</div>
+      <div class="neko-col-sm-3">3</div>
+    </div>
+    <h2>neko-col-md-x</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-md-6">6</div>
+      <div class="neko-col-md-3">3</div>
+      <div class="neko-col-md-3">3</div>
+    </div>
+    <h2>neko-col-lg-x</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-lg-6">6</div>
+      <div class="neko-col-lg-3">3</div>
+      <div class="neko-col-lg-3">3</div>
+    </div>
+    <h2>neko-col-xl-x</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-xl-6">6</div>
+      <div class="neko-col-xl-3">3</div>
+      <div class="neko-col-xl-3">3</div>
+    </div>
+    <h2>neko-offset-6</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-offset-6 neko-col-1">1</div>
+    </div>
+    <h2>neko-offset-sm-6</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-offset-sm-6 neko-col-1">1</div>
+    </div>
+    <h2>neko-offset-md-6</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-offset-md-6 neko-col-1">1</div>
+    </div>
+    <h2>neko-offset-lg-6</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-offset-lg-6 neko-col-1">1</div>
+    </div>
+    <h2>neko-offset-xl-6</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-offset-xl-6 neko-col-1">1</div>
+    </div>
+    <h2>Nesting columns</h2>
+    <div class="neko-row gril-example-row">
+      <div class="neko-col-sm-9">
+        Level 1: .neko-col-sm-9
+        <div class="neko-row gril-example-row">
+          <div class="neko-col-8 neko-col-sm-6">
+            Level 2: .neko-col-8 .neko-col-sm-6
+          </div>
+          <div class="neko-col-4 neko-col-sm-6">
+            Level 2: .neko-col-4 .neko-col-sm-6
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+
+  </div>
+</body>
+
 </html>

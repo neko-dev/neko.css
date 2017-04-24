@@ -1,10 +1,5 @@
-.#{$name-prefix}center {
-    display:  block;
-    margin: 0px auto;
-}
-
 .#{$name-prefix}container {
-    @extend .#{$name-prefix}center;
+    @extend .#{$name-prefix}helper-center;
     @include gutter();
     margin-right: auto;
     margin-left: auto;
@@ -12,7 +7,6 @@
 }
 
 .#{$name-prefix}row {
-    @extend .#{$name-prefix}center;
     @include remove-gutter();
     display: flex;
     flex-wrap: wrap;

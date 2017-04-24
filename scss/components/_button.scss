@@ -12,13 +12,13 @@
     outline: none;
     position: relative;
     color: $primary-text-color;
-    transition: $transition-base;
     border-radius: $Button-radius;
     user-select: none;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @include transition-base();
     @include box_shadow(1);
     &:hover {
       background-color: rgba(153, 153, 153, 0.2);

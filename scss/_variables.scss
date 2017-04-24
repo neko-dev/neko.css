@@ -8,8 +8,35 @@ $radius-base: 2px;
 
 $transition-base: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
+$transition-mobile-base: 
+    opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms,
+    transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // Button
 $Button-radius: $radius-base;
 
 $Button-base-height: 36px;
 $Button-base-min-width: 88px;
+
+// container
+$container-width: 900px;
+
+// gril
+
+$grid-columns:               12;
+$grid-gutter-width-base:     16px;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+)

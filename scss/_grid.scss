@@ -4,12 +4,14 @@
     margin-right: auto;
     margin-left: auto;
     max-width: $container-width;
+    position: relative;
 }
 
 .#{$name-prefix}row {
     @include remove-gutter();
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .#{$name-prefix}no-gutters {
@@ -45,8 +47,23 @@
         display: none;
       }
     }
+    .#{$name-prefix}col#{$infix},
+    .#{$name-prefix}col#{$infix}-auto {
+      @extend %#{$name-prefix}grid-column;
+    }
 
     @include media-breakpoint-up($breakpoint) {
+
+      .#{$name-prefix}col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .#{$name-prefix}col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+      }
 
       .#{$name-prefix}hidden#{$infix}-up {
         display: none;

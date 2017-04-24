@@ -14,7 +14,8 @@ body {
   padding-left: 8px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 900px; }
+  max-width: 900px;
+  position: relative; }
   @media (min-width: 576px) {
     .neko-container {
       padding-right: 8px;
@@ -41,7 +42,8 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  position: relative; }
   @media (min-width: 576px) {
     .neko-row {
       margin-right: -8px;
@@ -67,32 +69,74 @@ body {
     padding-right: 0;
     padding-left: 0; }
 
-.neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12 {
+.neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col,
+.neko-col-auto, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-sm,
+.neko-col-sm-auto, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-md,
+.neko-col-md-auto, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-lg,
+.neko-col-lg-auto, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12, .neko-col-xl,
+.neko-col-xl-auto {
   position: relative;
   width: 100%;
   min-height: 1px;
   padding-right: 8px;
   padding-left: 8px; }
   @media (min-width: 576px) {
-    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12 {
+    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col,
+    .neko-col-auto, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-sm,
+    .neko-col-sm-auto, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-md,
+    .neko-col-md-auto, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-lg,
+    .neko-col-lg-auto, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12, .neko-col-xl,
+    .neko-col-xl-auto {
       padding-right: 8px;
       padding-left: 8px; } }
   @media (min-width: 768px) {
-    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12 {
+    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col,
+    .neko-col-auto, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-sm,
+    .neko-col-sm-auto, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-md,
+    .neko-col-md-auto, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-lg,
+    .neko-col-lg-auto, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12, .neko-col-xl,
+    .neko-col-xl-auto {
       padding-right: 8px;
       padding-left: 8px; } }
   @media (min-width: 992px) {
-    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12 {
+    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col,
+    .neko-col-auto, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-sm,
+    .neko-col-sm-auto, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-md,
+    .neko-col-md-auto, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-lg,
+    .neko-col-lg-auto, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12, .neko-col-xl,
+    .neko-col-xl-auto {
       padding-right: 8px;
       padding-left: 8px; } }
   @media (min-width: 1200px) {
-    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12 {
+    .neko-col-1, .neko-col-2, .neko-col-3, .neko-col-4, .neko-col-5, .neko-col-6, .neko-col-7, .neko-col-8, .neko-col-9, .neko-col-10, .neko-col-11, .neko-col-12, .neko-col,
+    .neko-col-auto, .neko-col-sm-1, .neko-col-sm-2, .neko-col-sm-3, .neko-col-sm-4, .neko-col-sm-5, .neko-col-sm-6, .neko-col-sm-7, .neko-col-sm-8, .neko-col-sm-9, .neko-col-sm-10, .neko-col-sm-11, .neko-col-sm-12, .neko-col-sm,
+    .neko-col-sm-auto, .neko-col-md-1, .neko-col-md-2, .neko-col-md-3, .neko-col-md-4, .neko-col-md-5, .neko-col-md-6, .neko-col-md-7, .neko-col-md-8, .neko-col-md-9, .neko-col-md-10, .neko-col-md-11, .neko-col-md-12, .neko-col-md,
+    .neko-col-md-auto, .neko-col-lg-1, .neko-col-lg-2, .neko-col-lg-3, .neko-col-lg-4, .neko-col-lg-5, .neko-col-lg-6, .neko-col-lg-7, .neko-col-lg-8, .neko-col-lg-9, .neko-col-lg-10, .neko-col-lg-11, .neko-col-lg-12, .neko-col-lg,
+    .neko-col-lg-auto, .neko-col-xl-1, .neko-col-xl-2, .neko-col-xl-3, .neko-col-xl-4, .neko-col-xl-5, .neko-col-xl-6, .neko-col-xl-7, .neko-col-xl-8, .neko-col-xl-9, .neko-col-xl-10, .neko-col-xl-11, .neko-col-xl-12, .neko-col-xl,
+    .neko-col-xl-auto {
       padding-right: 8px;
       padding-left: 8px; } }
 
 @media (max-width: 575px) {
   .neko-hidden-down {
     display: none; } }
+
+.neko-col {
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 100%; }
+
+.neko-col-auto {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: auto; }
 
 .neko-hidden-up {
   display: none; }
@@ -171,6 +215,21 @@ body {
     display: none; } }
 
 @media (min-width: 576px) {
+  .neko-col-sm {
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+  .neko-col-sm-auto {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto; }
   .neko-hidden-sm-up {
     display: none; }
   .neko-col-sm-1 {
@@ -225,6 +284,21 @@ body {
     display: none; } }
 
 @media (min-width: 768px) {
+  .neko-col-md {
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+  .neko-col-md-auto {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto; }
   .neko-hidden-md-up {
     display: none; }
   .neko-col-md-1 {
@@ -279,6 +353,21 @@ body {
     display: none; } }
 
 @media (min-width: 992px) {
+  .neko-col-lg {
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+  .neko-col-lg-auto {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto; }
   .neko-hidden-lg-up {
     display: none; }
   .neko-col-lg-1 {
@@ -332,6 +421,21 @@ body {
   display: none; }
 
 @media (min-width: 1200px) {
+  .neko-col-xl {
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 100%; }
+  .neko-col-xl-auto {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto; }
   .neko-hidden-xl-up {
     display: none; }
   .neko-col-xl-1 {

@@ -40,7 +40,17 @@
       }
     }
 
+    @include media-breakpoint-down($breakpoint) {
+      .#{$name-prefix}hidden#{$infix}-down {
+        display: none;
+      }
+    }
+
     @include media-breakpoint-up($breakpoint) {
+
+      .#{$name-prefix}hidden#{$infix}-up {
+        display: none;
+      }
 
       @for $i from 1 through $grid-columns {
         .#{$name-prefix}col#{$infix}-#{$i} {

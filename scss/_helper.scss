@@ -1,6 +1,7 @@
 .#{$name-prefix}helper-center {
   display: block;
-  margin: 0px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @each $type-abbr in (m, p) {

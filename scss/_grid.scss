@@ -13,24 +13,6 @@
     position: relative;
 }
 
-.#{$name-prefix}no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  &.#{$name-prefix}container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 .#{$name-prefix}row {
     @include remove-gutter();
     display: flex;
@@ -48,6 +30,18 @@
       padding-left: 0;
     }
 }
+
+.#{$name-prefix}no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 
 %#{$name-prefix}grid-column {
     position: relative;

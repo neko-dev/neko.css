@@ -4,6 +4,10 @@
   margin-right: auto;
 }
 
+.#{$name-prefix}hidden {
+  display: none;
+}
+
 @each $type-abbr in (m, p) {
   $type: getAbbr($type-abbr);
   @for $i from 1 through $margin-helper-level {

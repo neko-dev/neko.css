@@ -30,7 +30,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('cssnano', () => {
+gulp.task('cssnano',['sass'], () => {
   var plugins = [
         cssnano()
     ];
@@ -42,20 +42,20 @@ gulp.task('cssnano', () => {
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('gzip', () => {
+gulp.task('gzip',['cssnano'], () => {
   return gulp.src('./dist/css/**/*.min.css')
     .pipe(gzip())
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('build', ['sass','cssnano','gzip'], () => {
+gulp.task('build', ['gzip'], () => {
 
 })
 
 gulp.task('watch', () => {
-  gulp.watch('./scss/**/*.scss', ['sass','cssnano']);
+  gulp.watch('./scss/**/*.scss', ['gzip']);
 })
 
-gulp.task('dev',['build','watch','gzip'],()=>{
+gulp.task('dev',['build','watch'],()=>{
   
 })

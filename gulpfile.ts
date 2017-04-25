@@ -2,6 +2,7 @@ import * as gulp from 'gulp'
 import * as sass from 'gulp-sass'
 import * as rename from 'gulp-rename'
 import * as autoprefixer from "autoprefixer"
+import * as gzip from "gulp-gzip"
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const postcssflexbugsfixes = require('postcss-flexbugs-fixes');
@@ -41,7 +42,13 @@ gulp.task('cssnano', () => {
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('build', ['sass','cssnano'], () => {
+gulp.task('gzip', () => {
+  return gulp.src('./dist/css/**/*.min.css')
+    .pipe(gzip())
+    .pipe(gulp.dest('./dist/css'));
+})
+
+gulp.task('build', ['sass','cssnano','gzip'], () => {
 
 })
 
@@ -49,6 +56,6 @@ gulp.task('watch', () => {
   gulp.watch('./scss/**/*.scss', ['sass','cssnano']);
 })
 
-gulp.task('dev',['build','watch'],()=>{
+gulp.task('dev',['build','watch','gzip'],()=>{
   
 })

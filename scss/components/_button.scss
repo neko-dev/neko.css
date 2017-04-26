@@ -1,26 +1,45 @@
-.#{$name-prefix}button {
+%#{$name-prefix}btn-base {
     display: inline-block;
-    height: $Button-base-height;
-    line-height: $Button-base-height;
-    min-width: $Button-base-min-width;
-    margin: 0px;
-    padding: 0px;
-    border: 10px;
+    height: $button-base-height;
+    line-height: $button-base-height;
+    min-width: $button-base-min-width;
+    margin: 0;
+    padding: 0;
     font-family: $font;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
     text-decoration: none;
     outline: none;
     position: relative;
-    color: $primary-text-color;
-    border-radius: $Button-radius;
+    border-radius: $button-radius;
     user-select: none;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0);
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     @include transition-base();
-    @include box_shadow(1);
+}
+
+.#{$name-prefix}btn {
+    @extend %#{$name-prefix}btn-base;
+    color: map-get(map-get($neko-colors, 'black'), 'primary');
+    border: 1px solid map-get(map-get($neko-colors, 'dark'), 'primary');
+
     &:hover {
-      background-color: rgba(153, 153, 153, 0.2);
+        color: map-get(map-get($neko-colors, 'white'), 'primary');
+        background-color: map-get(map-get($neko-colors, 'dark'), 'primary');
+    }
+}
+@each $color in map-keys($neko-colors) {
+    .#{$name-prefix}btn.#{$name-prefix}color-#{$color} {
+        @extend %#{$name-prefix}btn-base;
+        color: map-get(map-get($neko-colors, $color), '500');
+        border: 1px solid map-get(map-get($neko-colors, $color), '500');
+
+        &:hover {
+            color: $sub-text-color;
+            background-color: map-get(map-get($neko-colors, $color), '500');
+        }
     }
 }

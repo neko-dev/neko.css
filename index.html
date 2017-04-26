@@ -2,35 +2,83 @@
 <html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Neko UI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="./dist/css/neko.css">
-  <style>
-    .neko-row>div {
-        box-sizing: border-box;
-        border: 1px solid #2d9cd0;
-        line-height: 50px;
-        text-align: center;
-    }
-    .neko-container .neko-row + .neko-row{
-        margin-top: 10px;
-    }
-  </style>
+    <link rel="stylesheet" href="./dist/css/neko.css">
+    <style>
+        .neko-row>div {
+            box-sizing: border-box;
+            border: 1px solid #2d9cd0;
+            line-height: 50px;
+        }
+        .neko-container .neko-row + .neko-row{
+            margin-top: 10px;
+        }
+        .button-row>div{
+            border: 0;
+        }
+    </style>
 </head>
 
 <body>
   <div class="neko-container">
     <h2>neko-button</h2>
-    <button class="neko-btn">Button</button>
-    <button class="neko-btn neko-color-red">Button</button>
-    <button class="neko-btn neko-color-pink">Button</button>
-    <button class="neko-btn neko-color-cyan">Button</button>
-    <button class="neko-btn neko-color-light-green">Button</button>
-    <button class="neko-btn neko-color-blue-grey">Button</button>
-    <button class="neko-btn neko-color-teal">Button</button>
-    <button class="neko-btn neko-color-light-blue">Button</button>
+    <div class="neko-row button-row">
+        <div class="neko-col-12">
+            <h3>Default</h3>
+            <button class="neko-btn">Black</button>
+            <button class="neko-btn neko-color-blue">Blue</button>
+            <button class="neko-btn neko-color-light-blue">Light Blue</button>
+            <button class="neko-btn neko-color-cyan">Cyan</button>
+            <button class="neko-btn neko-color-teal">Teal</button>
+            <button class="neko-btn neko-color-green">Green</button>
+            <button class="neko-btn neko-color-light-green">Light Green</button>
+            <button class="neko-btn neko-color-lime">Lime</button>
+            <button class="neko-btn neko-color-blue-grey">Blue Grey</button>
+        </div>
+        <div class="neko-col-12">
+            <h3>Outline</h3>
+            <button class="neko-btn outline">Black</button>
+            <button class="neko-btn outline neko-color-blue">Blue</button>
+            <button class="neko-btn outline neko-color-light-blue">Light Blue</button>
+            <button class="neko-btn outline neko-color-cyan">Cyan</button>
+            <button class="neko-btn outline neko-color-teal">Teal</button>
+            <button class="neko-btn outline neko-color-green">Green</button>
+            <button class="neko-btn outline neko-color-light-green">Light Green</button>
+            <button class="neko-btn outline neko-color-lime">Lime</button>
+            <button class="neko-btn outline neko-color-blue-grey">Blue Grey</button>
+        </div>
+        <div class="neko-col-12">
+            <h3>Raised</h3>
+            <div class="neko-row button-row">
+                <div class="neko-col-12">
+                    <button class="neko-btn raised">Black</button>
+                    <button class="neko-btn raised neko-color-blue">Blue</button>
+                    <button class="neko-btn raised neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn raised neko-color-cyan">Cyan</button>
+                    <button class="neko-btn raised neko-color-teal">Teal</button>
+                    <button class="neko-btn raised neko-color-green">Green</button>
+                    <button class="neko-btn raised neko-color-light-green">Light Green</button>
+                    <button class="neko-btn raised neko-color-lime">Lime</button>
+                    <button class="neko-btn raised neko-color-blue-grey">Blue Grey</button>
+                </div>
+                <div class="neko-col-12">
+                    <button class="neko-btn outline raised">Black</button>
+                    <button class="neko-btn outline raised neko-color-blue">Blue</button>
+                    <button class="neko-btn outline raised neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn outline raised neko-color-cyan">Cyan</button>
+                    <button class="neko-btn outline raised neko-color-teal">Teal</button>
+                    <button class="neko-btn outline raised neko-color-green">Green</button>
+                    <button class="neko-btn outline raised neko-color-light-green">Light Green</button>
+                    <button class="neko-btn outline raised neko-color-lime">Lime</button>
+                    <button class="neko-btn outline raised neko-color-blue-grey">Blue Grey</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <h2>neko-col-x</h2>
     <div class="neko-row">
       <div class="neko-col-1">1</div>

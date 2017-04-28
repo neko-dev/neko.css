@@ -7,7 +7,7 @@
     padding: 0;
     font: {
         family: $font;
-        size: 14px;
+        size: 12px;
         weight: 500;
     }
     cursor: pointer;
@@ -41,9 +41,18 @@
             background-color: map-get(map-get($neko-colors, 'black'), 'primary');
         }
     }
-    &.raised{
+    &.shadow{
         &:hover{
             @include box_shadow(2);
+        }
+    }
+    &.merge{
+        color: map-get(map-get($neko-colors, 'black'), 'primary');
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover{
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, 'black'), 'primary');
         }
     }
 }
@@ -62,6 +71,18 @@
 @each $color in map-keys($neko-colors) {
     .#{$name-prefix}btn.outline.#{$name-prefix}color-#{$color} {
         color: map-get(map-get($neko-colors, $color), 'primary');
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover {
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, $color), 'primary');
+        }
+    }
+}
+@each $color in map-keys($neko-colors) {
+    .#{$name-prefix}btn.merge.#{$name-prefix}color-#{$color} {
+        color: map-get(map-get($neko-colors, $color), 'primary');
+        border: 0;
         background-color: rgba(0, 0, 0, 0);
 
         &:hover {

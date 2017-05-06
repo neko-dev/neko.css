@@ -4,7 +4,7 @@
     line-height: $Button-base-height;
     min-width: $Button-base-min-width;
     margin: 0px;
-    padding: 0px;
+    padding: 0px $Button-base-padding-horizontal;
     border: 10px;
     font-family: $font;
     cursor: pointer;

@@ -21,6 +21,11 @@
 
 // breakpoint
 
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
@@ -77,4 +82,8 @@
       margin-left:  ($gutter / -2);
     }
   }
+}
+
+@function getAbbr($str, $abbr-list: $abbr) {
+  @return if(map-get($abbr-list, $str) == null, "", "#{map-get($abbr-list, $str)}");
 }

@@ -2,6 +2,7 @@ import * as gulp from 'gulp'
 import * as sass from 'gulp-sass'
 import * as rename from 'gulp-rename'
 import * as autoprefixer from "autoprefixer"
+import * as gzip from "gulp-gzip"
 const cssnano = require('cssnano');
 const postcss = require('gulp-postcss');
 const postcssflexbugsfixes = require('postcss-flexbugs-fixes');
@@ -29,7 +30,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('cssnano', () => {
+gulp.task('cssnano',['sass'], () => {
   var plugins = [
         cssnano()
     ];
@@ -41,12 +42,18 @@ gulp.task('cssnano', () => {
     .pipe(gulp.dest('./dist/css'));
 })
 
-gulp.task('build', ['sass','cssnano'], () => {
+gulp.task('gzip',['cssnano'], () => {
+  return gulp.src('./dist/css/**/*.min.css')
+    .pipe(gzip())
+    .pipe(gulp.dest('./dist/css'));
+})
+
+gulp.task('build', ['gzip'], () => {
 
 })
 
 gulp.task('watch', () => {
-  gulp.watch('./scss/**/*.scss', ['sass','cssnano']);
+  gulp.watch('./scss/**/*.scss', ['gzip']);
 })
 
 gulp.task('dev',['build','watch'],()=>{

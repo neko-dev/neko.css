@@ -1,21 +1,23 @@
-.#{$name-prefix}center {
-    display:  block;
-    margin: 0px auto;
-}
-
 .#{$name-prefix}container {
-    @extend .#{$name-prefix}center;
+    @extend .#{$name-prefix}helper-center;
     @include gutter();
     margin-right: auto;
     margin-left: auto;
     max-width: $container-width;
+    position: relative;
+}
+
+.#{$name-prefix}container-fluid {
+    @extend .#{$name-prefix}helper-center;
+    @include gutter();
+    position: relative;
 }
 
 .#{$name-prefix}row {
-    @extend .#{$name-prefix}center;
     @include remove-gutter();
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .#{$name-prefix}no-gutters {
@@ -28,6 +30,18 @@
       padding-left: 0;
     }
 }
+
+.#{$name-prefix}no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 
 %#{$name-prefix}grid-column {
     position: relative;
@@ -46,7 +60,32 @@
       }
     }
 
+    @include media-breakpoint-down($breakpoint) {
+      .#{$name-prefix}hidden#{$infix}-down {
+        display: none;
+      }
+    }
+    .#{$name-prefix}col#{$infix},
+    .#{$name-prefix}col#{$infix}-auto {
+      @extend %#{$name-prefix}grid-column;
+    }
+
     @include media-breakpoint-up($breakpoint) {
+
+      .#{$name-prefix}col#{$infix} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+
+      .#{$name-prefix}col#{$infix}-auto {
+        flex: 0 0 auto;
+        width: auto;
+      }
+
+      .#{$name-prefix}hidden#{$infix}-up {
+        display: none;
+      }
 
       @for $i from 1 through $grid-columns {
         .#{$name-prefix}col#{$infix}-#{$i} {

@@ -1,0 +1,32 @@
+.#{$name-prefix}helper-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.#{$name-prefix}hidden {
+  display: none;
+}
+
+@each $type-abbr in (m, p) {
+  $type: getAbbr($type-abbr);
+  @for $i from 1 through $margin-helper-level {
+    @each $direction-abbr in (l, r, t, b) {
+      $direction: getAbbr($direction-abbr);
+      $prefix: #{$name-prefix}#{$type-abbr}-#{$direction-abbr};
+      .#{$prefix}-#{$i} {
+        #{$type}-#{$direction}: $i * $margin-helper-level-length
+      }
+    }
+    // Horizontral
+    .#{$name-prefix}#{$type-abbr}-h-#{$i} {
+      #{$type}-left: $i * $margin-helper-level-length;
+      #{$type}-right: $i * $margin-helper-level-length;
+    }
+    // Vertical
+    .#{$name-prefix}#{$type-abbr}-v-#{$i} {
+      #{$type}-top: $i * $margin-helper-level-length;
+      #{$type}-bottom: $i * $margin-helper-level-length;
+    }
+  }
+}

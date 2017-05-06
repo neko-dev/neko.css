@@ -6,96 +6,113 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="./dist/css/neko.css">
+  <link rel="stylesheet" href="./dist/css/neko.min.css">
   <style>
-    .gril-example-row>div {
+    .grid-example-row>div {
       background-color: rgba(244, 67, 54, 0.51);
       border: 2px solid rgb(244, 67, 54);
       line-height: 50px;
-      text-align: center;
     }
   </style>
 </head>
 
 <body>
-  <div class="neko-container">
+  <div class="neko-container neko-no-gutters">
     <h2>neko-button</h2>
     <button class="neko-button">Button</button>
-    <h2>neko-col-x</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-1">1</div>
-      <div class="neko-col-2">2</div>
-      <div class="neko-col-2">2</div>
-      <div class="neko-col-2">2</div>
-      <div class="neko-col-6">6</div>
-      <div class="neko-col-3">3</div>
-      <div class="neko-col-3">3</div>
+    <h2>box-sizing</h2>
+    <p>neko.css 将页面中所有元素的 <code>box-sizing</code> 置为 <code>border-box</code>， 这意味着元素的 <code>width</code> 和 <code>height</code>      属性将包括 <code>padding</code> 和 <code>border</code>， 详情
+      <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing">MDN</a></p>
+    <h2>布局容器</h2>
+    <p>使用布局容器来包含页面主体内容。</p>
+    <p><code>.neko-container</code> 类占据100%的宽度，最大宽度980px。</p>
+    <p><code>.neko-container-fluid</code> 类占据100%的宽度，没有最大宽度。</p>
+    <h2>网格系统</h2>
+    <p><code>.neko-row</code> 类为网格系统的容器。自带一个 <code>-8px</code> 的 <code>margin (gutters)</code> 来抵消布局容器的边距。使用 <code>.neko-no-gutters</code>      类可以删除 <code>gutters</code></p>
+    <p><code>.neko-row</code> 类的子元素只能是 <code>col</code>，内容应该被放在 <code>col</code> 里，<code>col</code> 只能是 <code>.neko-row</code>      的子元素</p>
+    <p>neko 的网格系统使用 <code>Flexbox</code> 实现，要注意局限性和 <a target="_blank" href="https://github.com/philipwalton/flexbugs">Flexbox bugs</a>。</p>
+    <p>每个 <code>col</code> 都有水平的 <code>padding</code>，你可以在 <code>row</code> 上添加 <code>.neko-no-gutters</code> 类来删除它</p>
+
+    <h2>neko-col-*</h2>
+    <p><code>.neko-col-*</code> 类可以创建一个 <code>col</code>。<code>.neko-col-*</code> 其中的 * 代表该元素占据多少列，一行最多12列，超出的元素会换到下一行。</p>
+    <div class="neko-row grid-example-row neko-m-b-1">
+      <div class="neko-col-3">.neko-col-3</div>
     </div>
-    <h2>neko-col-sm-x</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-sm-6">6</div>
-      <div class="neko-col-sm-3">3</div>
-      <div class="neko-col-sm-3">3</div>
+    <div class="neko-row grid-example-row neko-m-b-1">
+      <div class="neko-col-6">.neko-col-6</div>
     </div>
-    <h2>neko-col-md-x</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-md-6">6</div>
-      <div class="neko-col-md-3">3</div>
-      <div class="neko-col-md-3">3</div>
+    <div class="neko-row grid-example-row neko-m-b-1">
+      <div class="neko-col-12">.neko-col-12</div>
     </div>
-    <h2>neko-col-lg-x</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-lg-6">6</div>
-      <div class="neko-col-lg-3">3</div>
-      <div class="neko-col-lg-3">3</div>
+    <h2>响应式网格</h2>
+    <ul>
+      <li>.neko-col-[1-12] 所有屏幕设备上都会生效，如手机、电脑等。> 0</li>
+      <li>.neko-col-sm-[1-12] 在超小屏幕及以上的设备上生效，如横着的手机。> 576px</li>
+      <li>.neko-col-md-[1-12] 在小屏幕及以上的设备上生效，如平板电脑。> 768px</li>
+      <li>.neko-col-lg-[1-12] 在中等屏幕及以上的设备上生效，如笔记本电脑。> 992px</li>
+      <li>.neko-col-xl-[1-12] 在更大屏幕设备上生效，如台式电脑。> 1200px</li>
+    </ul>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-md-8 neko-col-5 neko-col-lg-3">.neko-col-md-8<br>.neko-col-5<br>.neko-col-lg-3</div>
+      <div class="neko-col-md-4 neko-col-7 neko-col-lg-9">.neko-col-md-4<br>.neko-col-7<br>.neko-col-lg-9</div>
     </div>
-    <h2>neko-col-xl-x</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-xl-6">6</div>
-      <div class="neko-col-xl-3">3</div>
-      <div class="neko-col-xl-3">3</div>
+    <h2>消除边距 .neko-no-gutters</h2>
+    <p>消除 <code>neko-row</code> 的负边距和 <code>neko-col</code> 的 <code>padding</code></p>
+    <div class="neko-row grid-example-row neko-no-gutters">
+      <div class="neko-col-md-8 neko-col-5 neko-col-lg-3">.neko-col-md-8<br>.neko-col-5<br>.neko-col-lg-3</div>
+      <div class="neko-col-md-4 neko-col-7 neko-col-lg-9">.neko-col-md-4<br>.neko-col-7<br>.neko-col-lg-9</div>
     </div>
-    <h2>neko-offset-6</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-offset-6 neko-col-1">1</div>
+    <h2>网格偏移</h2>
+    <p><code>neko-offset-*-*</code> 将列向右边偏移，支持响应式。</p>
+    <div class="neko-row grid-example-row">
+      <div class="neko-offset-md-6 neko-col-6">.neko-offset-md-6<br>.neko-col-6</div>
     </div>
-    <h2>neko-offset-sm-6</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-offset-sm-6 neko-col-1">1</div>
+    <h2>自动列宽</h2>
+    <p><code>neko-col-md-auto</code> 自动列宽，随内容变化。</p>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-lg-auto">.neko-col-lg-auto</div>
     </div>
-    <h2>neko-offset-md-6</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-offset-md-6 neko-col-1">1</div>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-auto">.neko-col-auto</div>
     </div>
-    <h2>neko-offset-lg-6</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-offset-lg-6 neko-col-1">1</div>
-    </div>
-    <h2>neko-offset-xl-6</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-offset-xl-6 neko-col-1">1</div>
-    </div>
-    <h2>Nesting columns</h2>
-    <div class="neko-row gril-example-row">
-      <div class="neko-col-sm-9">
-        Level 1: .neko-col-sm-9
-        <div class="neko-row gril-example-row">
-          <div class="neko-col-8 neko-col-sm-6">
-            Level 2: .neko-col-8 .neko-col-sm-6
-          </div>
-          <div class="neko-col-4 neko-col-sm-6">
-            Level 2: .neko-col-4 .neko-col-sm-6
-          </div>
+    <h2>网格嵌套</h2>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-9">
+        .neko-col-9
+        <div class="neko-row grid-example-row">
+          <div class="neko-col-6">.neko-col-6</div>
+          <div class="neko-col-6">.neko-col-6</div>
         </div>
         <br>
       </div>
     </div>
-
+    <h2>隐藏元素 neko-hidden</h2>
+    <pre>.neko-hidden {
+  display: none; 
+}</pre>
+    <h2>响应式隐藏 neko-hidden-*-[up/down]</h2>
+    <ul>
+      <li>.neko-hidden-*-up：在指定宽度及以上的设备上隐藏。</li>
+      <li>.neko-hidden-*-down：在指定宽度及以下的设备上隐藏。</li>
+    </ul>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-auto neko-hidden-md-up">neko-hidden-md-up</div>
+    </div>
+    <div class="neko-row grid-example-row">
+      <div class="neko-col-auto neko-hidden-md-down">neko-hidden-md-down</div>
+    </div>
+    <h2>水平居中</h2>
+    <button class="neko-helper-center neko-button">.neko-button .neko-helper-center</button>
+    <h2>边距工具</h2>
+    <p><code>.neko-[m/p]-{$direction}-{$level}</code></p>
+    <ul>
+      <li>m: margin</li>
+      <li>p: padding</li>
+      <li>$direction: l(eft), r(ight), t(op), b(ottom), h(orizontal), v(ertical)</li>
+      <li>$level: 1-5 之间的等级。每个等级之间相差 8px</li>
+    </ul>
+    <button class="neko-m-l-4 neko-button neko-m-b-1">.neko-button .neko-m-l-4 .neko-m-b-1</button><br>
+    <button class="neko-p-h-2 neko-button neko-m-b-1">.neko-button .neko-p-h-2 .neko-m-b-1</button>
   </div>
 </body>
 

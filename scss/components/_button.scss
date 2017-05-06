@@ -1,26 +1,93 @@
-.#{$name-prefix}button {
+%#{$name-prefix}btn-base {
     display: inline-block;
-    height: $Button-base-height;
-    line-height: $Button-base-height;
-    min-width: $Button-base-min-width;
-    margin: 0px;
-    padding: 0px $Button-base-padding-horizontal;
-    border: 10px;
-    font-family: $font;
+    height: $button-base-height;
+    line-height: $button-base-height;
+    min-width: $button-base-min-width;
+    margin: 0;
+    padding: 0;
+    font: {
+        family: $font;
+        size: 12px;
+        weight: 500;
+    }
     cursor: pointer;
     text-decoration: none;
     outline: none;
     position: relative;
-    color: $primary-text-color;
-    border-radius: $Button-radius;
+    border-radius: $button-radius;
     user-select: none;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0);
     text-align: center;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     @include transition-base();
-    @include box_shadow(1);
+}
+
+.#{$name-prefix}btn {
+    @extend %#{$name-prefix}btn-base;
+    color: map-get(map-get($neko-colors, 'white'), 'primary');
+    border: 1px solid map-get(map-get($neko-colors, 'black'), 'primary');
+    background-color: map-get(map-get($neko-colors, 'black'), 'primary');
+
     &:hover {
-      background-color: rgba(153, 153, 153, 0.2);
+        color: map-get(map-get($neko-colors, 'white'), 'accent');
+        background-color: map-get(map-get($neko-colors, 'black'), 'accent');
+    }
+    &.outline{
+        color: map-get(map-get($neko-colors, 'black'), 'primary');
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover {
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, 'black'), 'primary');
+        }
+    }
+    &.shadow{
+        &:hover{
+            @include box_shadow(2);
+        }
+    }
+    &.merge{
+        color: map-get(map-get($neko-colors, 'black'), 'primary');
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+        &:hover{
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, 'black'), 'primary');
+        }
+    }
+}
+
+@each $color in map-keys($neko-colors) {
+    .#{$name-prefix}btn.#{$name-prefix}color-#{$color} {
+        color: map-get(map-get($neko-colors, 'white'), 'primary');
+        border: 1px solid map-get(map-get($neko-colors, $color), 'primary');
+        background-color: map-get(map-get($neko-colors, $color), 'primary');
+
+        &:hover {
+            background-color: map-get(map-get($neko-colors, $color), 'accent');
+        }
+    }
+}
+@each $color in map-keys($neko-colors) {
+    .#{$name-prefix}btn.outline.#{$name-prefix}color-#{$color} {
+        color: map-get(map-get($neko-colors, $color), 'primary');
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover {
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, $color), 'primary');
+        }
+    }
+}
+@each $color in map-keys($neko-colors) {
+    .#{$name-prefix}btn.merge.#{$name-prefix}color-#{$color} {
+        color: map-get(map-get($neko-colors, $color), 'primary');
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover {
+            color: map-get(map-get($neko-colors, 'white'), 'primary');
+            background-color: map-get(map-get($neko-colors, $color), 'primary');
+        }
     }
 }

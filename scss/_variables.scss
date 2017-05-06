@@ -2,13 +2,15 @@ $name-prefix: "neko-";
 
 $font: 'Roboto', sans-serif;
 
+$primary-color: #2d9cd0;
 $primary-text-color: rgba(0, 0, 0, 0.870588);
+$sub-text-color: #ffffff;
 
 $radius-base: 2px;
 
 $transition-base: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
-$transition-mobile-base: 
+$transition-mobile-base:
     opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms,
     transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
@@ -30,18 +32,17 @@ $abbr: (
   b: bottom
 );
 
-// Button
-$Button-radius: $radius-base;
+// button
+$button-radius: $radius-base;
 
-$Button-base-height: 36px;
-$Button-base-min-width: 88px;
-$Button-base-padding-horizontal: 10px;
+$button-base-height: 36px;
+$button-base-min-width: 88px;
+$button-base-padding-horizontal: 10px;
 
 // container
 $container-width: 980px;
 
-// grid
-
+// gril
 $grid-columns:               12;
 $grid-gutter-width-base:     16px;
 $grid-gutter-widths: (

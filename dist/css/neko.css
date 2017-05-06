@@ -520,7 +520,7 @@ body {
   line-height: 36px;
   min-width: 88px;
   margin: 0;
-  padding: 0;
+  padding: 0 5px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;

@@ -423,6 +423,13 @@ body {
   border: 1px solid #ffffff;
   background-color: #ffffff; }
 
+.neko-btn.neko-color-ghost {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: #ffffff; }
+  .neko-btn.neko-color-ghost:hover {
+    background-color: transparent; }
+
 .neko-btn.neko-color-red {
   color: #ffffff;
   border: 1px solid #d32f2f;
@@ -567,6 +574,13 @@ body {
   color: #ffffff;
   background-color: transparent; }
   .neko-btn.outline.neko-color-white:hover {
+    color: #ffffff;
+    background-color: #ffffff; }
+
+.neko-btn.outline.neko-color-ghost {
+  color: #ffffff;
+  background-color: transparent; }
+  .neko-btn.outline.neko-color-ghost:hover {
     color: #ffffff;
     background-color: #ffffff; }
 
@@ -716,6 +730,14 @@ body {
   border: 0;
   background-color: transparent; }
   .neko-btn.merge.neko-color-white:hover {
+    color: #ffffff;
+    background-color: #ffffff; }
+
+.neko-btn.merge.neko-color-ghost {
+  color: #ffffff;
+  border: 0;
+  background-color: transparent; }
+  .neko-btn.merge.neko-color-ghost:hover {
     color: #ffffff;
     background-color: #ffffff; }
 

@@ -2,24 +2,110 @@
 <html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="./dist/css/neko.min.css">
-  <style>
-    .grid-example-row>div {
-      background-color: rgba(244, 67, 54, 0.51);
-      border: 2px solid rgb(244, 67, 54);
-      line-height: 50px;
-    }
-  </style>
+    <title>Neko UI</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="./dist/css/neko.css">
+    <style>
+        body{
+            background-color: #fff;
+        }
+        .neko-row>div {
+            box-sizing: border-box;
+            border: 1px solid #2d9cd0;
+            line-height: 50px;
+        }
+        .neko-container .neko-row + .neko-row{
+            margin-top: 10px;
+        }
+        .button-row>div{
+            border: 0;
+        }
+        .button-row .neko-btn{
+            margin: 10px 8px;
+        }
+    </style>
 </head>
 
 <body>
   <div class="neko-container neko-no-gutters">
     <h2>neko-button</h2>
-    <button class="neko-button">Button</button>
+    <div class="neko-row button-row">
+        <div class="neko-col-12">
+            <h3>Default</h3>
+            <button class="neko-btn">Black</button>
+            <button class="neko-btn neko-color-blue">Blue</button>
+            <button class="neko-btn neko-color-light-blue">Light Blue</button>
+            <button class="neko-btn neko-color-cyan">Cyan</button>
+            <button class="neko-btn neko-color-teal">Teal</button>
+            <button class="neko-btn neko-color-green">Green</button>
+            <button class="neko-btn neko-color-light-green">Light Green</button>
+            <button class="neko-btn neko-color-lime">Lime</button>
+        </div>
+        <div class="neko-col-12">
+            <h3>Outline</h3>
+            <button class="neko-btn outline">Black</button>
+            <button class="neko-btn outline neko-color-blue">Blue</button>
+            <button class="neko-btn outline neko-color-light-blue">Light Blue</button>
+            <button class="neko-btn outline neko-color-cyan">Cyan</button>
+            <button class="neko-btn outline neko-color-teal">Teal</button>
+            <button class="neko-btn outline neko-color-green">Green</button>
+            <button class="neko-btn outline neko-color-light-green">Light Green</button>
+            <button class="neko-btn outline neko-color-lime">Lime</button>
+        </div>
+        <div class="neko-col-12">
+            <h3>Merge (Immersion)</h3>
+            <div class="neko-row button-row">
+                <div class="neko-col-12">
+                    <button class="neko-btn merge">Black</button>
+                    <button class="neko-btn merge neko-color-blue">Blue</button>
+                    <button class="neko-btn merge neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn merge neko-color-cyan">Cyan</button>
+                    <button class="neko-btn merge neko-color-teal">Teal</button>
+                    <button class="neko-btn merge neko-color-green">Green</button>
+                    <button class="neko-btn merge neko-color-light-green">Light Green</button>
+                    <button class="neko-btn merge neko-color-lime">Lime</button>
+                </div>
+            </div>
+        </div>
+        <div class="neko-col-12">
+            <h3>Shadow</h3>
+            <div class="neko-row button-row">
+                <div class="neko-col-12">
+                    <button class="neko-btn shadow">Black</button>
+                    <button class="neko-btn shadow neko-color-blue">Blue</button>
+                    <button class="neko-btn shadow neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn shadow neko-color-cyan">Cyan</button>
+                    <button class="neko-btn shadow neko-color-teal">Teal</button>
+                    <button class="neko-btn shadow neko-color-green">Green</button>
+                    <button class="neko-btn shadow neko-color-light-green">Light Green</button>
+                    <button class="neko-btn shadow neko-color-lime">Lime</button>
+                </div>
+                <div class="neko-col-12">
+                    <button class="neko-btn outline shadow">Black</button>
+                    <button class="neko-btn outline shadow neko-color-blue">Blue</button>
+                    <button class="neko-btn outline shadow neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn outline shadow neko-color-cyan">Cyan</button>
+                    <button class="neko-btn outline shadow neko-color-teal">Teal</button>
+                    <button class="neko-btn outline shadow neko-color-green">Green</button>
+                    <button class="neko-btn outline shadow neko-color-light-green">Light Green</button>
+                    <button class="neko-btn outline shadow neko-color-lime">Lime</button>
+                </div>
+                <div class="neko-col-12">
+                    <button class="neko-btn merge shadow">Black</button>
+                    <button class="neko-btn merge shadow neko-color-blue">Blue</button>
+                    <button class="neko-btn merge shadow neko-color-light-blue">Light Blue</button>
+                    <button class="neko-btn merge shadow neko-color-cyan">Cyan</button>
+                    <button class="neko-btn merge shadow neko-color-teal">Teal</button>
+                    <button class="neko-btn merge shadow neko-color-green">Green</button>
+                    <button class="neko-btn merge shadow neko-color-light-green">Light Green</button>
+                    <button class="neko-btn merge shadow neko-color-lime">Lime</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <h2>box-sizing</h2>
     <p>neko.css 将页面中所有元素的 <code>box-sizing</code> 置为 <code>border-box</code>， 这意味着元素的 <code>width</code> 和 <code>height</code>      属性将包括 <code>padding</code> 和 <code>border</code>， 详情
       <a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing">MDN</a></p>
@@ -102,7 +188,7 @@
       <div class="neko-col-auto neko-hidden-md-down">neko-hidden-md-down</div>
     </div>
     <h2>水平居中</h2>
-    <button class="neko-helper-center neko-button">.neko-button .neko-helper-center</button>
+    <button class="neko-helper-center neko-btn">.neko-btn .neko-helper-center</button>
     <h2>边距工具</h2>
     <p><code>.neko-[m/p]-{$direction}-{$level}</code></p>
     <ul>
@@ -111,8 +197,8 @@
       <li>$direction: l(eft), r(ight), t(op), b(ottom), h(orizontal), v(ertical)</li>
       <li>$level: 1-5 之间的等级。每个等级之间相差 8px</li>
     </ul>
-    <button class="neko-m-l-4 neko-button neko-m-b-1">.neko-button .neko-m-l-4 .neko-m-b-1</button><br>
-    <button class="neko-p-h-2 neko-button neko-m-b-1">.neko-button .neko-p-h-2 .neko-m-b-1</button>
+    <button class="neko-m-l-4 neko-btn neko-m-b-1">.neko-btn .neko-m-l-4 .neko-m-b-1</button><br>
+    <button class="neko-p-h-2 neko-btn neko-m-b-1">.neko-btn .neko-p-h-2 .neko-m-b-1</button>
   </div>
 </body>
 
